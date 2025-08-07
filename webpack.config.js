@@ -9,14 +9,20 @@ module.exports = {
     publicPath: '/'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.css']
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: {
+        loader: "babel-loader"
+      }
+      },
+       {
+        test: /\.css$/,       // <-- CSS loader
+        use: ['style-loader', 'css-loader']
       }
     ]
   },

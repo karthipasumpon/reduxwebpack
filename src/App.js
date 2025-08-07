@@ -1,3 +1,4 @@
+import React from 'react';
 import AddCustomer from './AddCustomer';
 import './App.css';
 import ViewCustomer from './ViewCustomer';
